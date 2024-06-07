@@ -1,0 +1,102 @@
+-- SimRail - The Railway Simulator
+-- LUA Scripting scenario
+-- Version: 1.0
+--
+require("SimRailCore")
+
+DeveloperMode = function()
+    return true
+end
+
+StartPosition = {-8702.15,295.39,-1841.03}
+Trains = {}
+Sounds = {}
+ScenarioStep = "0"
+
+function PrepareScenario()
+
+end
+
+function EarlyScenarioStart()
+    SetDateTime(DateTimeCreate(2017, 05, 15, 20, 48, 46))
+    StartRecorder()
+    Trains[0] = SpawnTrainsetOnSignal("Player", FindSignal("StB_N1"), 40, false, true, false, true, {
+        CreateNewSpawnVehicleDescriptor(LocomotiveNames.EP07_135, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false)
+    })
+    Trains[0].SetState(DynamicState.dsStop, TrainsetState.tsShunting, true) --aktivált kabin
+    Trains[0].SetRadioChannel(3, true)
+    ScenarioStep = "Start"
+end
+
+function StartScenario()
+
+end
+
+function OnVirtualDispatcherReady()
+    Log("VD: OK")
+    CreateCoroutine(function ()
+        Log("coroutine OK")
+        DisplayMessage("Most hoztad vissza az üres szenes kocsikat a bányához. A pihenőidődet a csonka vágányon fogod tölteni. Szállj le és csatold le az üres szenes kocsikat!", 40)
+        Log(ScenarioStep)
+        ScenarioStep = "szetcsatlas"
+        Log(ScenarioStep)
+        coroutine.yield(CoroutineYields.WaitForSeconds, 10)
+        Log("Hívhatod")
+        DisplayMessage("Hívd a diszpécsert (ZEW3)", 10)
+    end)
+end
+
+function OnVirtualDispatcherResponseReceived(ordered_id, status)
+    if(status == VDReponseCode.Error or status == VDReponseCode.Undefined) then
+        Log("VD response to order ID " .. ordered_id .. " => " .. status)
+    end
+end
+
+function OnPlayerRadioCall(trainsetInfo, radio_SelectionCall)
+    Log("Call pressed in " .. trainsetInfo.name .. ". Call type: " .. tostring(radio_SelectionCall))
+    --Log(RailstockGetPlayerTrainset().GetCurrentlyUsedChannel())
+    --Log("kurva")
+    if(ScenarioStep == "szetcsatlas") then
+        if(RailstockGetPlayerTrainset().GetCurrentlyUsedChannel() == 3) then
+            Log("Vétel")
+            DisplayMessage("Teszt", 5)
+            Log("Kihuzohoz")
+            VDSetRoute("StB_N1", "t1574k", VDOrderType.ManeuverRoute) --J-ről csonkára
+            DisplayMessage("Irány a csonkavágány!", 10)
+            ScenarioStep = "csonkan"
+            --Comms("Hello")
+        end
+    end
+    if(ScenarioStep == "csonkan") then
+        if(RailstockGetPlayerTrainset().GetCurrentlyUsedChannel() == 3) then
+            Log("Vétel")
+            DisplayMessage("Teszt", 5)
+            DisplayMessage("Jó pihit!", 5)
+            SetDateTime(DateTimeCreate(2017, 05, 16, 4, 20, 0))
+            Log("F-re")
+            VDSetRoute("StB_Tm26", "StA_F", VDOrderType.ManeuverRoute) --Csonkáról F-re
+            ScenarioStep = "F"
+            --Comms("Hello")
+        end
+    end
+    if(ScenarioStep == "F") then
+        if(RailstockGetPlayerTrainset().GetCurrentlyUsedChannel() == 3) then
+            Log("F -> Janow Bejárat")
+            VDSetRoute("StA_F", "StA_Akps", VDOrderType.TrainRoute) --KMStaszic Kijárat
+            VDSetRoute("Ssc_D", "Ssc_Bkps", VDOrderType.TrainRoute) -- Staszic Kijárat
+            VDSetRoute("KMB_Y25", "KMB_Lkps", VDOrderType.TrainRoute) -- Janów Bejárat
+        end
+    end
+end

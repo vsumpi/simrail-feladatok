@@ -1,0 +1,46 @@
+-- SimRail - The Railway Simulator
+-- LUA Scripting scenario
+-- Version: 1.0
+--
+require("SimRailCore")
+
+DeveloperMode = function()
+    return true
+end
+
+StartPosition = {9209.63, 315.07, 16237.56}
+Sounds = {}
+
+--Below are functions called by SimRail
+--- Function called by SimRail when the loading of scenario starts - generally designed for setting up necessery data and preloading-assets
+function PrepareScenario()
+    
+end
+
+--- Function called by SimRail when the loading finishes - you should set scenario time in here, spawn trains etc. After calling this mission recorder is started and stuff gets registered
+function StartScenario()
+    StaticTrains = {}
+    StartRecorder()
+    VDSetCrossingState("L1_289.317_A", true)
+    DisplayMessage("LuaText", 10)
+    DisplayChatText("LuaText2")
+    WaitingBeforeZabkowiceEntry = false
+    SetCameraView(CameraView.FirstPersonWalkingOutside)
+
+    PlayerTrainset = SpawnTrainsetOnSignal(nil, FindSignal("B_B"), 15, false, true, false, true, {
+        CreateNewSpawnVehicleDescriptor(LocomotiveNames.EN76_006, false)
+    })
+    PlayerTrainset.SetState(DynamicState.dsAccFast, TrainsetState.tsTrain, true)
+    PlayerTrainset.SetRadioChannel(2, true)
+    PlayerTrainset.SetTimetable(LoadTimetableFromFile("Temp/main_vehicle.xml"), false)
+    --SetTestScenario()
+end
+
+function Test()
+    PlayerTrainset.SetTimetable(LoadTimetableFromFile("Temp/main_vehicle2.xml"), true)
+end
+
+--- Function below is called by SimRail when VD is ready to start receiving orders
+function OnVirtualDispatcherReady()
+    Log("Ready!")
+end

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneryManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UID>7e5b94a2-3b2f-49a1-b3c7-dac950cb01d3</UID>
+  <SceneName>WorldStreamerPlayer</SceneName>
+  <ThumbnailFile>Thumbnail.png</ThumbnailFile>
+  <ThumbnailText>ThumbnailTextKey</ThumbnailText>
+  <MapFile>Map.png</MapFile>
+  <LocationNameHeader>HeaderText</LocationNameHeader>
+  <LocationName>LocationNameKey</LocationName>
+  <Description>SceneryDescriptionKey</Description>
+  <CustomTranslations>
+    <CustomTranslation Key="ThumbnailTextKey">
+      <Translations>
+        <CustomTranslationEntry LanguageTag="en">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="fr">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="de">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="pl">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="it">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="ru">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="es">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="cs">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="hu">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-TW">vSumpi feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-CN">vSumpi feladatok</CustomTranslationEntry>
+      </Translations>
+    </CustomTranslation>
+    <CustomTranslation Key="HeaderText">
+      <Translations>
+        <CustomTranslationEntry LanguageTag="en">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="fr">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="de">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="pl">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="it">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="ru">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="es">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="cs">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="hu">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-TW">Egyedi SimRail feladatok</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-CN">Egyedi SimRail feladatok</CustomTranslationEntry>
+      </Translations>
+    </CustomTranslation>
+    <CustomTranslation Key="LocationNameKey">
+      <Translations>
+        <CustomTranslationEntry LanguageTag="en">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="fr">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="de">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="pl">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="it">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="ru">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="es">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="cs">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="hu">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-TW">Jó szórakozást!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-CN">Jó szórakozást!</CustomTranslationEntry>
+      </Translations>
+    </CustomTranslation>
+    <CustomTranslation Key="SceneryDescriptionKey">
+      <Translations>
+        <CustomTranslationEntry LanguageTag="en">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="fr">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="de">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="pl">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="it">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="ru">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="es">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="cs">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="hu">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-TW">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="zh-CN">Egyedi érdekes feladatok a teljes területen!</CustomTranslationEntry>
+      </Translations>
+    </CustomTranslation>
+  </CustomTranslations>
+</SceneryManifest>

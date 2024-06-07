@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimeTableStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TrainName>Pasażerski</TrainName>
+  <TrainNumber>40665</TrainNumber>
+  <LineNumber>Nr. 1</LineNumber>
+  <From>KATOWICE MUCHOWIEC STASZIC</From>
+  <To>Dąbrowa Górnicza Sikorka</To>
+  <WayPoints>
+  <WayPointFromXml>
+    <NameOfPoint>Dąbrowa Górnicza Sikorka</NameOfPoint>
+		<DisplayName>Dąbrowa Górnicza Sikorka</DisplayName>
+		<StopType>departure</StopType>
+		<Line>898</Line>
+		<Mileage>0</Mileage>
+    <RadioChanels>
+				<int>3</int>
+			</RadioChanels>
+		<ArrivalTime>0</ArrivalTime>
+		<DepartureTime>0</DepartureTime>
+		<TrainType>ZUE</TrainType>
+		<StationCategory>B</StationCategory>
+  </WayPointFromXml>
+  <WayPointFromXml>
+    <NameOfPoint>Sosnowiec Dańdówka</NameOfPoint>
+		<DisplayName>Sosnowiec Dańdówka</DisplayName>
+		<StopType>technicalStop</StopType>
+    <RadioChanels>
+				<int>3</int>
+			</RadioChanels>
+		<Line>898</Line>
+		<Mileage>0</Mileage>
+		<ArrivalTime>0</ArrivalTime>
+		<DepartureTime>0</DepartureTime>
+		<TrainType>ZUE</TrainType>
+		<StationCategory>B</StationCategory>
+  </WayPointFromXml>
+  </WayPoints>
