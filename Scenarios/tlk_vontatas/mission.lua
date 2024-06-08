@@ -35,7 +35,7 @@ function StartScenario()
     -- FindSignal("DZ_Z")Hutakatowice
 
     -- Játékos szerelvénye
-    Trains[0] = SpawnTrainsetOnSignal("Traxx", FindSignal("DZ_Z"), 16, false, true, false, true, {
+    Trains[0] = SpawnTrainsetOnSignal("Traxx", FindSignal("StB_N1"), 30, false, true, false, true, {
         CreateNewSpawnVehicleDescriptor(LocomotiveNames.E186_134, false),
         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
