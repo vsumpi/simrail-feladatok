@@ -1,37 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TimeTableStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <TrainName>Pasażerski</TrainName>
-  <TrainNumber>40665</TrainNumber>
+  <TrainName>629134. számú</TrainName>
+  <TrainNumber>Segélyvonat</TrainNumber>
   <LineNumber>Nr. 1</LineNumber>
   <From>KATOWICE MUCHOWIEC STASZIC</From>
-  <To>Dąbrowa Górnicza Sikorka</To>
+  <To>Sosnowiec Dańdówka</To>
   <WayPoints>
-  <WayPointFromXml>
-    <NameOfPoint>Dąbrowa Górnicza Sikorka</NameOfPoint>
-		<DisplayName>Dąbrowa Górnicza Sikorka</DisplayName>
+	<WayPointFromXml>
+		<NameOfPoint>KATOWICE MUCHOWIEC STASZIC</NameOfPoint>
+		<DisplayName>KATOWICE MUCHOWIEC STASZIC</DisplayName>
 		<StopType>departure</StopType>
-		<Line>898</Line>
+		<Line>0</Line>
 		<Mileage>0</Mileage>
-    <RadioChanels>
-				<int>3</int>
-			</RadioChanels>
-		<ArrivalTime>0</ArrivalTime>
-		<DepartureTime>0</DepartureTime>
-		<TrainType>ZUE</TrainType>
-		<StationCategory>B</StationCategory>
-  </WayPointFromXml>
-  <WayPointFromXml>
-    <NameOfPoint>Sosnowiec Dańdówka</NameOfPoint>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>35100</ArrivalTime>
+		<DepartureTime>35250</DepartureTime>
+		<RadioChanels>
+			<int>3</int>
+		</RadioChanels>
+	</WayPointFromXml>
+	<WayPointFromXml>
+		<NameOfPoint>Staszic</NameOfPoint>
+		<DisplayName>Staszic</DisplayName>
+		<StopType>noStopover</StopType>
+		<Line>0</Line>
+		<Mileage>0</Mileage>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>35610</ArrivalTime>
+		<DepartureTime>35610</DepartureTime>
+		<RadioChanels>
+			<int>3</int>
+		</RadioChanels>
+	</WayPointFromXml>
+		<WayPointFromXml>
+		<NameOfPoint>Katowice Much. KMB</NameOfPoint>
+		<DisplayName>Katowice Much. KMB</DisplayName>
+		<StopType>noStopover</StopType>
+		<Line>0</Line>
+		<Mileage>0</Mileage>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>35760</ArrivalTime>
+		<DepartureTime>35760</DepartureTime>
+		<RadioChanels>
+			<int>5</int>
+		</RadioChanels>
+	</WayPointFromXml>
+		<WayPointFromXml>
+		<NameOfPoint>Katowice Janów</NameOfPoint>
+		<DisplayName>Katowice Janów</DisplayName>
+		<StopType>technicalStop</StopType>
+		<Line>0</Line>
+		<Mileage>0</Mileage>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>36240</ArrivalTime>
+		<DepartureTime>36680</DepartureTime>
+		<RadioChanels>
+			<int>5</int>
+		</RadioChanels>
+	</WayPointFromXml>
+		<WayPointFromXml>
+		<NameOfPoint>Stawiska</NameOfPoint>
+		<DisplayName>Stawiska</DisplayName>
+		<StopType>technicalStop</StopType>
+		<Line>0</Line>
+		<Mileage>0</Mileage>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>36730/ArrivalTime>
+		<DepartureTime>36730</DepartureTime>
+		<RadioChanels>
+			<int>5</int>
+		</RadioChanels>
+	</WayPointFromXml>
+		<WayPointFromXml>
+		<NameOfPoint>Sosnowiec Dańdówka</NameOfPoint>
 		<DisplayName>Sosnowiec Dańdówka</DisplayName>
 		<StopType>technicalStop</StopType>
-    <RadioChanels>
-				<int>3</int>
-			</RadioChanels>
-		<Line>898</Line>
+		<Line>0</Line>
 		<Mileage>0</Mileage>
-		<ArrivalTime>0</ArrivalTime>
-		<DepartureTime>0</DepartureTime>
-		<TrainType>ZUE</TrainType>
-		<StationCategory>B</StationCategory>
-  </WayPointFromXml>
+		<TrainType>TME</TrainType>
+		<StationCategory />
+		<ArrivalTime>36970</ArrivalTime>
+		<DepartureTime>36970</DepartureTime>
+		<RadioChanels>
+			<int>5</int>
+		</RadioChanels>
+	</WayPointFromXml>
   </WayPoints>
+<StartSpeedLimit>30</StartSpeedLimit>
+<StartGlobalSpeedLimit>30</StartGlobalSpeedLimit>
+<StartRadioChannels>
+<int>3</int>
+</StartRadioChannels>
+</TimeTableStorage>

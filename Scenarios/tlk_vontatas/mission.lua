@@ -5,7 +5,7 @@
 require("SimRailCore")
 
 DeveloperMode = function()
-    return false
+    return true
 end
 
 -- Kötelező alapbeállítások
@@ -13,6 +13,7 @@ StartPosition = { -8702.15, 295.39, -1841.03 }
 Trains = {}
 AiTrains = {}
 Sounds = {}
+Dragon = {}
 ScenarioStep = "0"
 
 
@@ -30,45 +31,35 @@ function StartScenario()
     -- Ide jöhet minden ami a játék alatt történik
     StartRecorder()
     -- FindSignal("StB_N1")KMStaszic
-    -- FindSignal("Sk_E")Janów - Dandowka
+    -- FindSignal("Sk_M")Janów - Dandowka
     -- FindSignal("SDn_Sz1N")Dandowka bejárat
     -- FindSignal("DZ_Z")Hutakatowice
 
     -- Játékos szerelvénye
     Trains[0] = SpawnTrainsetOnSignal("Traxx", FindSignal("StB_N1"), 30, false, true, false, true, {
         CreateNewSpawnVehicleDescriptor(LocomotiveNames.E186_134, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false),
-        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_118_0, false)
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_177_6, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
+        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false)
     })
     Trains[0].SetState(DynamicState.dsStop, TrainsetState.tsTrain, true)
     Trains[0].SetRadioChannel(3, true)
@@ -102,11 +93,11 @@ function StartScenario()
         end
     })
 
-    CreateTrackTrigger(FindTrack("t5518"), 1, 1, -- Stawiska Kijárat
+    CreateSignalTrigger(FindSignal("Sk_M"), 200, -- Stawiska Kijárat
         {
             check = UnconditialCheck,
             result = function(trainset)
-                SpawnTrainsetOnSignalAsync("dragon-teher", FindSignal("Sk_D"), 16, false, false, true,
+                Dragon[0] = SpawnTrainsetOnSignalAsync("dragon-teher", FindSignal("Sk_D"), 16, false, false, true,
                     {
                         CreateNewSpawnVehicleDescriptor(LocomotiveNames.E6ACTadb_027, false),
                         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
@@ -130,38 +121,38 @@ function StartScenario()
                         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
                         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
                         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3151_5351_989_9, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3356_5300_177_6, false),
-                        CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false),
                         CreateNewSpawnVehicleDescriptor(FreightWagonNames.EAOS_3351_5356_394_5, false)
                     }, function(trainset)
-                        AiTrains[1] = trainset
-                        VDSetRoute("Sk_D", "Sk_Mkps", VDOrderType.TrainRoute) -- Dandowka felől Janow Bejáratig
-                        trainset.SetState(DynamicState.dsAccSlow, TrainsetState.tsTrain, true)
+                        Dragon[0] = trainset
+                        VDSetRoute("Sk_D", "Sk_Ekps", VDOrderType.TrainRoute) -- Dandowka felől Janow Bejáratig
+                        trainset.SetState(DynamicState.dsAccFast, TrainsetState.tsTrain, true)
                     end)
                 return true
             end
         })
-    
 
-    CreateTrackTrigger(FindTrack("t7843"), 21,-1, -- Dragon Teher X Player
+        CreateSignalTrigger(FindSignal("KJw_W"), 1162, 
+        {
+            check = function (trainset)
+                return true
+            end,
+            result = function(trainset)
+                DisplayChatText("stawiska")
+                VDSetRoute("Sk_M", "Sk_Dbl", VDOrderType.TrainRoute) -- Janow Kijárat Dandowkara
+            end
+        })
+        
+        CreateSignalTrigger(FindSignal("KJw_W"), 300, 
     {
-        check = UnconditialCheck,
-        result = function(trainset)
-            Log("Despawn")
-            DespawnTrainset(AiTrains[1])
-            Log("Kijárat")
-            DisplayChatText("EP07_135 gépnek Dandowka-ig szabad az út. Esemény mentest!")
-            VDSetRoute("Sk_E", "Sk_Dbl", VDOrderType.TrainRoute) -- Janow Kijárat Dandowkara
-        end
+	check = function (trainset)
+		return true
+	end,
+	result = function(trainset)
+        DespawnTrainset(Teher[0])
+	end
     })
+
+
 
     CreateTrackTrigger(FindTrack("t6510"), 1, -1, -- Dandowka Kijárat X Tolatás
     {
@@ -170,6 +161,7 @@ function StartScenario()
         end,
         result = function(trainset)
             CreateCoroutine(function()
+                DisplayMessage("ack", 5)
                 coroutine.yield(CoroutineYields.WaitForSeconds, 5)
                 DisplayChatText("")
                 AiTrains[1] = SpawnTrainsetOnSignalAsync("Also vonali szemely", FindSignal("SDn_A"), 1300, false, false,
@@ -426,14 +418,13 @@ function OnVirtualDispatcherReady()
 	end
     })
 
-
-    CreateSignalTrigger(FindSignal("LB_ISpP2"), 5, 
+    CreateTrackTrigger(FindTrack("t25662"), 76, 1, 
     {
-	check = function (trainset)
+	check = function(trainset)
 		return true
 	end,
 	result = function(trainset)
-        AiTrains[7] = SpawnTrainsetOnSignalAsync("szembe_szemely", FindSignal("LB_H1"), 425, false, false, true,{
+        AiTrains[7] = SpawnTrainsetOnSignalAsync("szembe_szemely", FindSignal("LB_H1"), 500, false, false, true,{
             CreateNewSpawnVehicleDescriptor(LocomotiveNames.EN76_022, false),
             CreateNewSpawnVehicleDescriptor(LocomotiveNames.EN76_006, false)
         }, function ()
@@ -442,6 +433,7 @@ function OnVirtualDispatcherReady()
         end)
 	end
     })
+
     CreateSignalTrigger(FindSignal("LC_S1"), 900, 
     {
     	check = function (trainset)
@@ -452,6 +444,8 @@ function OnVirtualDispatcherReady()
             DespawnTrainset(AiTrains[7])
     	end
     })
+
+    
 
     CreateTrackTrigger(FindTrack("t11990"), 41, -1, 
     {
@@ -537,8 +531,9 @@ function OnPlayerRadioCall(trainsetInfo, radio_SelectionCall)
             coroutine.yield(CoroutineYields.WaitForSeconds, 2)
             VDSetRoute("StA_F", "StA_Akps", VDOrderType.TrainRoute)   --KMStaszic Kijárat
             VDSetRoute("Ssc_D", "Ssc_Bkps", VDOrderType.TrainRoute)   -- Staszic Kijárat
-            VDSetRoute("KMB_Y25", "KMB_Lkps", VDOrderType.TrainRoute) -- Janów Bejárat
-            VDSetRoute("KJw_Z", "KJw_Wkps", VDOrderType.TrainRoute)   -- Janów kijárat
+            VDSetRoute("KMB_Y25", "KMB_Mkps", VDOrderType.TrainRoute)
+            VDSetRoute("KJw_H", "KJw_Akps", VDOrderType.TrainRoute)
+            Trains[0].SetTimetable(LoadTimetableFromFile("staszicrol.xml"), false)
             ScenarioStep="alapjarat" --N
         end)
     end
@@ -630,13 +625,12 @@ function Ebreszto(trainset)
     if (ScenarioStep == "ebreszto") then
         CreateCoroutine(function ()
             SetDateTime(DateTimeCreate(2017, 05, 16, 5, 28, 0))
+            coroutine.yield(CoroutineYields.WaitForSeconds, 3)
             DisplayChatText("ebreszto")
-            coroutine.yield(CoroutineYields.WaitForSeconds, 5)
         end)
     end
     if (ScenarioStep == "ebren") then
         DisplayChatText("tartalek")
         VDSetRoute("StB_Tm26", "StA_F", VDOrderType.ManeuverRoute) --Csonkáról F-re
-        trainset.SetTimetable(LoadTimetableFromFile("staszicrol.xml"))
     end
 end

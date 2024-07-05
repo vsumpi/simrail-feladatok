@@ -8,8 +8,8 @@
   </Train_Engine_Names>
   <Train_Car_Names />
   <Scenario_Start_Time>2017-05-15T19:45:00</Scenario_Start_Time>
-  <Scenario_Lenght>80</Scenario_Lenght>
-  <Difficulty>4</Difficulty>
+  <Scenario_Lenght>55</Scenario_Lenght>
+  <Difficulty>3</Difficulty>
   <TrackLenghtInMeters>2000</TrackLenghtInMeters>
   <SeasonOfTheYear>Spring</SeasonOfTheYear>
   <HeaderText>HeaderText</HeaderText>
@@ -25,8 +25,8 @@
   <CustomTranslations>
     <CustomTranslation Key="SceneryNameText">
       <Translations>
-        <CustomTranslationEntry LanguageTag="en">Dandowka Vágányzár</CustomTranslationEntry>
-        <CustomTranslationEntry LanguageTag="hu">Dandowka Vágányzár</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="en">TLK mentőakció</CustomTranslationEntry>
+        <CustomTranslationEntry LanguageTag="hu">TLK mentőakció</CustomTranslationEntry>
       </Translations>
     </CustomTranslation>
         <CustomTranslation Key="HeaderText">
