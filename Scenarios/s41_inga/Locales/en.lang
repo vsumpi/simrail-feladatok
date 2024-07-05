@@ -1,0 +1,29 @@
+Intro=Üdvözlet! Pont most érkeztél meg, Katowice Muchowiec Staszic-ra üres szenes kocsikkal. Hamarosan lejár a munkaidőd így a csonka vágányon fogsz pihenni, miután a Dragon elhalad melletted. A vonatszám: 629134
+IntroStart=Csatold le az üres szenes kocsikat és jelentkezz a diszpécsernek, ha elhaladt a Dragon.
+dragondiszpecser=\u003ccolor="green"\u003e[KMStaszic]:\u003c/color\u003e629027 Kezdje meg a bejárást a G vágányra!
+dragonszemelyzet=\u003ccolor="orange"\u003e[629027]:\u003c/color\u003eVétel!
+szetcsatlas=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eHello KMStaszic, 629134 jelentkezik hamarosan lejár a szoglgálati időm, a szerelvény leakasztva.
+szetcsatlasok=\u003ccolor="green"\u003e[KMStaszic]:\u003c/color\u003eRendben kezd el a tolatást a csonkavágányra, jó pihenést!
+szetcsatlaskezd=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eKöszönöm, vétel!
+hatar=Állj meg és jelentkezz a diszpécsernek!
+tolatas=Kapcsolj Tolatás módba!
+piheno=Várd meg a reggelt, jó pihenést!
+ebreszto=\u003ccolor="green"\u003e[KMStaszic]:\u003c/color\u003eKMStaszic keresi a 629134 -t! Jelentkezz 629134!
+ebresztook=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eVételen...
+tartalek=\u003ccolor="green"\u003e[KMStaszic]:\u003c/color\u003e629134 Lerobbant a Sosnowiec Dańdówkáról 5 óra 23 perckor elindult 42108-as számú InterRégió vonat. Téged jelöltek ki a továbbítására. Járj be az F jelzőig majd jelentkezz!
+staszicszemely=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eMegérkeztem az F jelzőhöz várom a további utasítást.
+staszicdiszpecser=\u003ccolor="green"\u003e[KMStaszic]:\u003c/color\u003e Itt a menetrend és a menetengedély, balesetmentest és jó utat.
+tolatasok=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eDańdówka készen állok a rájárásra!
+tolatasack=\u003ccolor="green"\u003e[SDn]:\u003c/color\u003eVétel, kezdheted a rájárást!
+hutakatowice=\u003ccolor="green"\u003e[DZB]:\u003c/color\u003eHello 629134, egy pár percet várnod kell vonat kereszt miatt.
+stawiska=\u003ccolor="green"\u003e[KJ]:\u003c/color\u003e 629134 helyetelen menetben szabad az út Dańdówka-ra.
+dandowka=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eHello Dańdówka a tartalék mozdony megérkezett helytelen bejátatra, de tilosat jelez.
+dandowkaack=\u003ccolor="green"\u003e[SDn]:\u003c/color\u003eVétel, 629134 meghaladhatod a tilos jelzést legfeljebb 40km/h-val.
+dandowkatolatas=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003eMegérkeztem a jelzőhöz, tolatásra kész!
+dandowkatolatasack=\u003ccolor="green"\u003e[SDn]:\u003c/color\u003eKezdheted a tolatást, vétel.
+help=A vontatáshoz menj fel az EU07-re, aktiváld az akkumulátort és kapcsold be a passzív üzemmódot, old a mozdony és rögzítőféket, majd térj vissza a Traxxba!
+szemelyok=\u003ccolor="yellow"\u003e[629134]:\u003c/color\u003e Készen állok az indulásra, várom a további utasítást.
+szemelyack=\u003ccolor="green"\u003e[ZW]:\u003c/color\u003e Továbbítsd a szerelvényt Zawierce állomásig Dorota, Huta Katowicen keresztül, az InterRégió eredeti 42108-as vonatszámával közlekedsz tovább.
+zaw=\u003ccolor="yellow"\u003e[42108]:\u003c/color\u003e Zawierce ez 42108 a lerobbant InterRégióval. Várom a további utasítást.
+zawack=\u003ccolor="green"\u003e[ZW]:\u003c/color\u003e Hello 42108, állítsd ki a szerelvényt kihúzóra utána várj további utasításra.
+ack=Hamarosan speciális jelzőhöz érkezel!!!
